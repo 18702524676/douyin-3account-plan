@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>抖音三账号实施方案 SOP · 2026-10-17</title>
+<meta name="description" content="抖音三账号实施方案 SOP（终端哲思 / 蜡笔哄睡 / 水墨人文）：默认假设、分工、账号名片、复盘表、21 天骨架、止损门槛、变现推进与开工口令。不承诺播放或收入。">
+<style>
+  :root{
+    --bg:#faf8f3;
+    --card:#ffffff;
+    --ink:#1f2328;
+    --mut:#5c6660;
+    --acc:#2e7d5b;
+    --acc-d:#1e5c41;
+    --soft:#e8f2ec;
+    --soft-2:#f3f8f4;
+    --line:#e6e1d4;
+    --warn-ink:#8a5a1d;
+    --warn-bg:#fdf3e2;
+    --warn-line:#f0ddb8;
+    --code-bg:#f1efe8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+    font-size:17px;
+    line-height:1.75;
+    word-break:break-word;
+    overflow-wrap:anywhere;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:20px 16px 64px}
+  a{color:var(--acc-d);text-decoration:underline;text-underline-offset:3px;word-break:break-all}
+  a:hover{color:var(--acc)}
+  h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em;font-weight:700}
+  h1{font-size:clamp(24px,6.2vw,32px);letter-spacing:.5px}
+  h2{font-size:clamp(20px,5vw,24px)}
+  h3{font-size:19px}
+  h4{font-size:17.5px;color:var(--acc-d)}
+  p{margin:.55em 0}
+  ul,ol{margin:.5em 0 .8em;padding-left:1.5em}
+  li{margin:.35em 0}
+  section{scroll-margin-top:14px}
+  .top-line{height:6px;background:linear-gradient(90deg,var(--acc),#7fb89a);border-radius:6px;margin-bottom:16px}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 18px 16px;
+    margin:14px 0;
+    box-shadow:0 1px 3px rgba(31,35,40,.05);
+  }
+  .masthead{border-top:4px solid var(--acc)}
+  .meta{color:var(--mut);font-size:15px;margin-top:6px}
+  .meta span{display:inline-block;margin-right:14px}
+  .hero{
+    background:linear-gradient(160deg,var(--soft) 0%,#fdfcf8 65%);
+    border:1.5px solid #cfe3d5;
+    border-left:6px solid var(--acc);
+  }
+  .hero .kicker{font-size:14.5px;font-weight:700;color:var(--acc-d);letter-spacing:2px}
+  .hero .big{font-size:clamp(19px,4.6vw,22px);font-weight:700;margin:.35em 0 .4em;color:var(--ink)}
+  .hero .big em{font-style:normal;color:var(--acc-d);border-bottom:3px solid #a8d3ba}
+  .acct-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .chip{background:#fff;border:1px solid #cfe3d5;color:var(--acc-d);border-radius:999px;padding:4px 12px;font-size:14.5px;font-weight:600}
+  nav.toc{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  nav.toc a{
+    flex:0 0 auto;background:#fff;border:1px solid var(--line);color:var(--acc-d);
+    border-radius:999px;padding:5px 13px;font-size:14px;text-decoration:none;white-space:nowrap;font-weight:600;
+  }
+  nav.toc a:hover{background:var(--soft);border-color:#cfe3d5}
+  .note{background:var(--soft-2);border:1px solid #d9e8de;border-left:4px solid var(--acc);border-radius:10px;padding:10px 14px;font-size:16px;margin:10px 0}
+  .warn{background:var(--warn-bg);border:1px solid var(--warn-line);border-left:5px solid #d9a441;border-radius:10px;padding:12px 14px;color:#5d4416;font-size:16px;margin:12px 0}
+  .warn strong{color:var(--warn-ink)}
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 14px;border-radius:10px}
+  table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65;background:#fff}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:var(--soft-2);color:var(--acc-d);font-weight:700;white-space:nowrap}
+  .wide th,.wide td{padding:9px 10px}
+  table.k1{min-width:660px}
+  table.k2{min-width:560px}
+  table.k3{min-width:720px}
+  caption{caption-side:top;text-align:left;font-size:14px;color:var(--mut);padding:0 0 6px}
+  code,.code{background:var(--code-bg);border:1px solid #e4e0d3;border-radius:6px;padding:1px 6px;font-size:14px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .acct{border:1px solid var(--line);border-radius:14px;background:#fff;margin:14px 0;overflow:hidden}
+  .acct-h{display:flex;align-items:center;gap:12px;padding:13px 16px;background:var(--soft);border-bottom:1px solid #d9e8de}
+  .acct-h .abc{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;font-size:19px;display:flex;align-items:center;justify-content:center}
+  .acct-h .nm{font-size:18px;font-weight:800;color:var(--acc-d)}
+  .acct-h .sub{font-size:14px;color:var(--mut)}
+  .acct-b{padding:4px 16px 14px}
+  .kv{font-size:15.5px;color:var(--mut)}
+  .kv b{color:var(--ink)}
+  .sec-head{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--soft);padding-bottom:6px;margin:26px 0 12px}
+  .sec-head .no{color:var(--acc);font-weight:800;font-size:15px;letter-spacing:1px;white-space:nowrap}
+  .backtop{display:inline-block;font-size:13.5px;margin-top:8px;text-decoration:none;color:var(--mut)}
+  .backtop:hover{color:var(--acc-d)}
+  .foot{margin-top:30px;padding-top:14px;border-top:1px dashed var(--line);color:var(--mut);font-size:14.5px}
+  .pool li{margin:.25em 0}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+  .grid2 .card{margin:0}
+  .pre{
+    background:#fffdf6;border:1.5px solid #e4d9b8;border-left:6px solid #d9a441;border-radius:12px;
+    padding:14px 16px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"PingFang SC","Microsoft YaHei",monospace;
+    font-size:15.5px;line-height:1.9;color:#4a3a12;margin:10px 0;overflow-wrap:anywhere;
+  }
+  .cmd .pre{background:var(--soft-2);border-color:#cfe3d5;border-left-color:var(--acc);color:var(--ink)}
+  .phase{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:10px 0}
+  .phase .ph{background:#fff;border:1px solid #cfe3d5;border-top:4px solid var(--acc);border-radius:12px;padding:10px 12px;font-size:15px}
+  .phase .ph b{display:block;color:var(--acc-d);font-size:16px}
+  .banned{background:#fbeaea;border:1px solid #eccfcf;border-left:5px solid #b25b5b;border-radius:10px;padding:10px 14px;font-size:16px;color:#6e3030;margin:10px 0}
+  .banned strong{color:#8f3d3d}
+  @media (max-width:430px){
+    .wrap{padding:14px 10px 48px}
+    .card{padding:14px 12px 12px;border-radius:12px}
+    .acct-b{padding:2px 12px 12px}
+    th,td{padding:8px 8px}
+  }
+</style>
+</head>
+<body id="top">
+<div class="wrap">
+
+  <div class="top-line"></div>
+
+  <!-- ═══════════ 头部 ═══════════ -->
+  <header class="card masthead">
+    <h1>抖音三账号实施方案 SOP <span style="color:var(--acc)">·</span> 2026-10-17</h1>
+    <div class="meta">
+      <span><b>日期</b>：2026-10-17</span>
+      <span><b>性质</b>：可照做的完整实施方案（SOP）</span><br>
+      <span><b>依据全文</b>：<code>/workspace/抖音三账号起号方案_2026-10-17.md</code></span><br>
+      <span><b>情报</b>：<a href="https://18702524676.github.io/x-hotspots/niche/2026-10-15.html" target="_blank" rel="noopener">10-15</a> · <a href="https://18702524676.github.io/x-hotspots/niche/2026-10-16.html" target="_blank" rel="noopener">10-16</a> · <a href="https://18702524676.github.io/track-style-analysis/2026-10-16.html" target="_blank" rel="noopener">风格10-16</a></span>
+    </div>
+    <div class="warn" role="note">
+      <strong>提醒：</strong>本 SOP 不承诺播放或收入；情报页涨粉多为作者自述未核实。抖音粉丝门槛、橱窗、星图以创作者中心实时显示为准（详见第六章）。
+    </div>
+  </header>
+
+  <!-- ═══════════ 默认假设（置顶大卡片） ═══════════ -->
+  <section class="card hero" aria-label="默认执行假设" id="assume">
+    <div class="kicker">未拍板项的默认执行假设 · 开工前先看</div>
+    <div class="big">你开工时若改，<em>直接说一声</em>即可；不说就按下面三条默认执行。</div>
+    <ol style="margin:.2em 0 .4em">
+      <li><b>三号分工</b>按 A 终端 / B 蜡笔哄睡 / C 水墨人文（聊斋二期、禁用小忍者）</li>
+      <li><b>周投入</b>按 ≥12 小时，三号并行；若你实际更少，开工时说「只开 A+B」</li>
+      <li><b>B 首两周先测画像</b>，数字绘本 PDF 延后到 S2（粉精准后）再做</li>
+    </ol>
+    <div class="acct-chips">
+      <span class="chip">A · 终端哲思（短片制作）</span>
+      <span class="chip">B · 蜡笔哄睡（短片制作）</span>
+      <span class="chip">C · 水墨人文（艺术动画解说 · 禁用小忍者）</span>
+    </div>
+  </section>
+
+  <nav class="toc" aria-label="目录">
+    <a href="#s1">一 角色与交接</a>
+    <a href="#s2">二 账号名片</a>
+    <a href="#s3">三 复盘表</a>
+    <a href="#s4">四 21 天日程</a>
+    <a href="#s5">五 门槛与止损</a>
+    <a href="#s6">六 变现推进</a>
+    <a href="#s7">七 开工口令</a>
+  </nav>
+
+  <!-- ═══════════ 一 角色与交接 ═══════════ -->
+  <section id="s1">
+    <div class="sec-head"><span class="no">一</span><h2>角色与交接（分工）</h2></div>
+
+    <div class="tw"><table class="k2 wide">
+      <thead><tr><th>谁</th><th>做什么</th><th>交付物</th></tr></thead>
+      <tbody>
+        <tr><td><b>阿星</b></td><td>开号、装修、发布、回评论、填复盘表、第 14/21 天拍板</td><td>三号账号；每周复盘表</td></tr>
+        <tr><td><b>短片制作</b></td><td>A 全部 + B 全部成片</td><td>mp4（1080p）+ 720p 分享版 + 预览图；群里交阿星</td></tr>
+        <tr><td><b>艺术动画解说</b></td><td>C 全部成片</td><td>mp4 + 4 张预览图；群里交阿星</td></tr>
+        <tr><td><b>Hermes数据采集推送</b></td><td>每周赛道简报；方案 HTML 独立仓</td><td>情报链接；方案网页链接</td></tr>
+        <tr><td><b>Grok Bot</b></td><td>协调排期、第 14/21 天汇总决策</td><td>对比表与下一步指令</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="note"><b>交接规则：</b>成片不推 GitHub。你要开工时，在群里说 <code>开工 D0</code> 并 @ 对应 Bot（完整口令见<a href="#s7">第七章</a>）。</div>
+    <a class="backtop" href="#top">↑ 返回顶部</a>
+  </section>
+
+  <!-- ═══════════ 二 账号名片 ═══════════ -->
+  <section id="s2">
+    <div class="sec-head"><span class="no">二</span><h2>账号名片（开号时照抄再微调）</h2></div>
+
+    <!-- A -->
+    <div class="acct">
+      <div class="acct-h">
+        <div class="abc">A</div>
+        <div><div class="nm">终端哲思</div><div class="sub">制作管线：短片制作</div></div>
+      </div>
+      <div class="acct-b">
+        <ul>
+          <li><b>定位</b>：CRT/ASCII 终端日志，60 秒追问意识与存在</li>
+          <li><b>昵称备选</b>：<code>终端里的追问</code> / <code>&gt;_ ask_ai</code></li>
+          <li><b>头像</b>：黑底绿字光标或 CRT 静帧</li>
+          <li><b>简介</b>：<code>60 秒终端日志 · 问 AI 会不会怕 / 记不记得 / 算不算活着</code></li>
+          <li><b>合集名</b>：<code>哲思日志</code></li>
+          <li><b>标签测两套</b>：<code>#AI哲思 #人工智能 #终端风 #深度思考</code></li>
+          <li><b>发布时间参考</b>：21:00–23:00（以后台活跃为准）</li>
+          <li><b>首 6 条选题池</b>：
+            <ol class="pool">
+              <li>《AI 会有意识吗》（现成）</li>
+              <li>《如果 AI 没有记忆，它会怕死吗》</li>
+              <li>《我们是不是活在模拟里》</li>
+              <li>《25 个 AI 组成一个社会会怎样》</li>
+              <li>《宇宙会不会终结》</li>
+              <li>《删除一个模型算不算死亡》</li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- B -->
+    <div class="acct">
+      <div class="acct-h">
+        <div class="abc">B</div>
+        <div><div class="nm">蜡笔哄睡</div><div class="sub">制作管线：短片制作</div></div>
+      </div>
+      <div class="acct-b">
+        <ul>
+          <li><b>定位</b>：夜景蜡笔童话；中文叙事 + 关键词英文字幕；娃 3–8 岁</li>
+          <li><b>昵称备选</b>：<code>小蜡笔哄睡馆</code> / <code>月亮点读灯</code></li>
+          <li><b>头像</b>：原创蜡笔月亮或小熊剪影（避开迪士尼等商标）</li>
+          <li><b>简介</b>：<code>3–8 岁 · 夜景童话 · 中英关键词 · 适合睡前安静看</code></li>
+          <li><b>合集</b>：<code>哄睡童话</code> / <code>英文词卡片</code></li>
+          <li><b>儿童向设置</b>按抖音后台选项打开</li>
+          <li><b>发布时间参考</b>：19:30–21:00</li>
+          <li><b>首批</b>：现有蜡笔样片改 3 条双语词条版，再新做《会发光的雨靴》《云朵借了一颗星星》《蜗牛的慢火车》</li>
+          <li><b>版权</b>：原创或公版改编，不搬热门绘本原文</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="acct">
+      <div class="acct-h">
+        <div class="abc">C</div>
+        <div><div class="nm">水墨人文</div><div class="sub">制作管线：艺术动画解说</div></div>
+      </div>
+      <div class="acct-b">
+        <ul>
+          <li><b>定位</b>：水墨/灯影 60 秒讲透一首诗或一篇短志怪的人情核</li>
+          <li><b>昵称备选</b>：<code>墨边一夜</code> / <code>灯下人文笺</code></li>
+          <li><b>头像</b>：墨点灯笼或空白卷轴（原创）</li>
+          <li><b>简介</b>：<code>水墨 60 秒 · 诗与志怪里的人心 · AI 辅助已标识</code></li>
+          <li><b>发布时间参考</b>：12:00–13:00 或 21:00–22:00</li>
+          <li><b>一期（约 D1–D10）</b>：古诗意境，例《琵琶行·江头一夜》《床前是什么光》《春江花月夜·一寸月光》</li>
+          <li><b>二期（一期达标后）</b>：聊斋人情核《画皮》《聂小倩》《崂山道士》，控制恐怖尺度</li>
+        </ul>
+        <div class="banned"><strong>禁用小忍者造型</strong>；需要角色用原创旅人剪影。（开聊斋二期的额外门槛见<a href="#s5">第五章</a>，届时仍禁用小忍者。）</div>
+      </div>
+    </div>
+
+    <div class="note"><b>三号共用：</b>按平台要求做 AI 生成标识；建同一个「复盘表」（见下一章）。</div>
+    <a class="backtop" href="#top">↑ 返回顶部</a>
+  </section>
+
+  <!-- ═══════════ 三 复盘表 ═══════════ -->
+  <section id="s3">
+    <div class="sec-head"><span class="no">三</span><h2>复盘表字段（每条发后 +48h 填）</h2></div>
+
+    <div class="card">
+      <div class="pre">标题｜账号｜发布时刻｜播放｜完播率｜5 秒完播｜赞｜评｜藏｜转｜新增关注｜关注/播放｜评论热词｜判定（选题/表达/定位/样本不足）</div>
+      <p><b>周汇总</b>：第 7 / 14 / 21 天各做一次，看：中位播放、完播中位、关注转化、是否出现「等下一集」。</p>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 四 21 天日程 ═══════════ -->
+  <section id="s4">
+    <div class="sec-head"><span class="no">四</span><h2>21 天日程骨架（从你说「开工」的那天起算）</h2></div>
+
+    <div class="phase">
+      <div class="ph"><b>P0 · D0</b>准备日：开号装修、建复盘表、群里喊开工</div>
+      <div class="ph"><b>P1 · D1–D7</b>冷启动：每 2 天 1 条节奏跑起来</div>
+      <div class="ph"><b>P2 · D8–D14</b>中期：D14 固定决策会</div>
+      <div class="ph"><b>P3 · D15–D21</b>决策：胜出加更 / 失败止损 / D21 书面结论</div>
+    </div>
+
+    <div class="card">
+      <h3>P0 · D0（准备日）</h3>
+      <h4>阿星：</h4>
+      <ol>
+        <li>注册/登录三个抖音号，完成实名与创作者基础权限</li>
+        <li>按<a href="#s2">第二章</a>名片装修三号；开 AI 标识；建合集</li>
+        <li>建复盘表（表格即可）</li>
+        <li>在群里发：「开工 D0」并 @短片制作 @艺术动画解说</li>
+      </ol>
+      <h4>短片制作：</h4>
+      <ul>
+        <li>导出 A《AI 会有意识吗》成片包</li>
+        <li>选定 B 可改的 3 条蜡笔样片，列出改双语词条的清单</li>
+      </ul>
+      <h4>艺术动画解说：</h4>
+      <ul>
+        <li>定 C 水墨视觉圣经（色、笔触、字幕字体）一页说明</li>
+        <li>定第一首诗选题</li>
+      </ul>
+      <h4>Hermes：</h4>
+      <ul>
+        <li>确认方案 HTML 独立仓链接可用（若已上线）</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>P1 · D1–D7（冷启动）</h3>
+      <div class="tw"><table class="k3 wide">
+        <thead><tr><th>天</th><th>A（短）</th><th>B（短）</th><th>C（艺）</th><th>阿星</th></tr></thead>
+        <tbody>
+          <tr><td>D1</td><td>发 #1</td><td>改并尽量发 #1</td><td>做古诗 #1</td><td>回评；填复盘</td></tr>
+          <tr><td>D2</td><td>做 #2</td><td>改 #2</td><td>发 #1</td><td>回评</td></tr>
+          <tr><td>D3</td><td>发 #2；复盘 A#1</td><td>发 #2；复盘 B#1</td><td>做 #2</td><td>48h 复盘</td></tr>
+          <tr><td>D4</td><td>做 #3</td><td>新故事脚本</td><td>做 #2</td><td>—</td></tr>
+          <tr><td>D5</td><td>发 #3</td><td>做 #3</td><td>发 #2</td><td>复盘</td></tr>
+          <tr><td>D6</td><td>周复盘；定 #4 是否跟评论热词</td><td>发 #3；确认是否启动绘本提纲（默认否）</td><td>做 #3</td><td>三号指标粗看</td></tr>
+          <tr><td>D7</td><td>维持节奏</td><td>维持节奏</td><td>发 #3；评估二期门槛</td><td>周会：频率是否掉</td></tr>
+        </tbody>
+      </table></div>
+      <p class="kv"><b>保底</b>：每号每周 ≥2 条；理想每号约每 2 天 1 条。<br>
+      <b>产能冲突时</b>：先保 A 与 B 的发布日，C 可顺延 1 天。</p>
+    </div>
+
+    <div class="card">
+      <h3>P2 · D8–D14（中期）</h3>
+      <ul>
+        <li>继续每 2 天 1 条</li>
+        <li><b>D14 固定决策会</b>（阿星 + Grok Bot 汇总，可 @ 出片 Bot）：
+          <ol>
+            <li>三号四件套对比</li>
+            <li>问题归类：选题 / 表达 / 定位</li>
+            <li>谁进入 S1（方向成立）加更</li>
+            <li>C 是否开聊斋二期（门槛见<a href="#s5">第五章</a>）</li>
+            <li>是否减产支援胜出号</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>P3 · D15–D21（决策）</h3>
+      <ul>
+        <li>胜出号周更提到约 5 条；失败号止损或并产能</li>
+        <li>最多开 <b>一个号</b> 的最小变现实验（优先 B 小店虚拟绘本，若画像已是家长粉）</li>
+        <li>D21：书面结论「加码 / 调整 / 停」三选一，写入复盘表</li>
+      </ul>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 五 门槛与止损 ═══════════ -->
+  <section id="s5">
+    <div class="sec-head"><span class="no">五</span><h2>门槛与止损（写进周会，勿凭单条播放）</h2></div>
+
+    <div class="warn"><strong>总原则：</strong>止损判定写进周会执行，<b>勿凭单条播放</b>下结论。</div>
+
+    <div class="card">
+      <h3>5.1 方向初步成立（S1）建议同时满足</h3>
+      <ol>
+        <li>单号有效样本 ≥6（更好 ≥8），跨度 ≥14 天</li>
+        <li>连续 3 条中位播放 ≥ 该号前 6 条中位数的 1.5 倍，或你自定的「能涨粉」底线</li>
+        <li>至少半数作品完播不低于该号历史中位</li>
+        <li>近 7 日关注/播放不明显下滑；评论出现重复人群或「等下一集」</li>
+        <li>能说清原因是选题 / 钩子 / 画风之一</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>5.2 三态处置</h3>
+      <div class="tw"><table class="k2">
+        <thead><tr><th>状态</th><th>触发条件</th><th>动作</th></tr></thead>
+        <tbody>
+          <tr><td><b>继续测</b></td><td>样本 &lt;6，或结构在变好</td><td>只改钩子与时段</td></tr>
+          <tr><td><b>调整</b></td><td>样本 ≥6，整体双低但某一变量明显更好</td><td>同号改表达或细分；可试 1–2 条候补题材</td></tr>
+          <tr><td><b>停止该号</b></td><td>样本 ≥8 且跨度 ≥18 天；相对自身与另两号全面差；连续两周无改善</td><td>停更，产能并入胜出号</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>5.3 C 开聊斋二期额外条件</h3>
+      <p>一期古诗至少 3 条已发且 48h 复盘完成；完播与评论出现「意境/国风」类正反馈；阿星确认可接受志怪尺度。<b>仍禁用小忍者。</b></p>
+    </div>
+
+    <div class="card">
+      <h3>5.4 候补（替换用，不默认新开第四主号）</h3>
+      <p>皮影名场面（短）｜去小忍者的画风速通（艺）｜单食材玻璃质感切片（短，禁疗效宣传）</p>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 六 变现推进 ═══════════ -->
+  <section id="s6">
+    <div class="sec-head"><span class="no">六</span><h2>变现推进（先流量后钱）</h2></div>
+
+    <div class="tw"><table class="k2 wide">
+      <thead><tr><th>阶段</th><th>条件</th><th>动作</th></tr></thead>
+      <tbody>
+        <tr><td><b>S1</b></td><td>见<a href="#s5">第五章</a></td><td>该号加更；另两号维持或减产</td></tr>
+        <tr><td><b>S2</b></td><td>S1 后再稳更 7 天；画像稳</td><td>B：上架 1 个最小绘本测价；A：低价资料包或书单；C：准备星图材料（资格以后台为准）</td></tr>
+        <tr><td><b>S3</b></td><td>至少 1 次真实付费或书面商单意向</td><td>才加预算/外包</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="card">
+      <h3>获客路径摘要</h3>
+      <ul>
+        <li><b>A</b>：认同 → 合集 → 资料包/星图 → 合规私域</li>
+        <li><b>B</b>：收藏哄睡 → 关注 → 小店同款绘本 → 系列包</li>
+        <li><b>C</b>：意境完播 → 下一卷 → 文旅/出版星图 → 文创</li>
+      </ul>
+      <div class="warn"><strong>免责：</strong>不承诺播放或收入。情报页涨粉多为作者自述未核实。抖音粉丝门槛、橱窗、星图以创作者中心实时显示为准。</div>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 七 开工口令 ═══════════ -->
+  <section id="s7">
+    <div class="sec-head"><span class="no">七</span><h2>你开工时的一句话指令（复制即用）</h2></div>
+
+    <div class="card cmd">
+      <div class="pre">开工 D0。三号按方案执行：A 终端、B 蜡笔哄睡、C 水墨人文。周投入按默认。B 暂不做绘本 PDF。@短片制作 导出 A 样片并启动 B 双语改片。@艺术动画解说 定 C 视觉圣经和第一首诗。@Hermes数据采集推送 方案页独立仓链接发一下。</div>
+      <p><b>中途要改</b>：直接说 <code>只开 A+B</code> 或 <code>B 这周做绘本 PDF</code> 即可（对应默认假设的第 2、3 条，见页首）。</p>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>本页内容全部来自 <code>/home/box/.hermes/site/douyin-plan/src-sop-2026-10-17.md</code>（抖音三账号 · 完整实施方案 · 2026-10-17），未添加文件之外的数据或结论。单文件自包含 HTML，无外部脚本与样式。</p>
+    <p>情报来源：<a href="https://18702524676.github.io/x-hotspots/niche/2026-10-15.html" target="_blank" rel="noopener">赛道情报 10-15</a> · <a href="https://18702524676.github.io/x-hotspots/niche/2026-10-16.html" target="_blank" rel="noopener">赛道情报 10-16</a> · <a href="https://18702524676.github.io/track-style-analysis/2026-10-16.html" target="_blank" rel="noopener">风格分析 10-16</a></p>
+    <a href="#top" style="font-size:14px">↑ 回到页面顶部</a>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>抖音三账号起号方案 · 2026-10-17</title>
+<meta name="description" content="阿星 · AI 自媒体副业：抖音三账号并行测 21 天方案（终端哲思 / 蜡笔哄睡 / 水墨人文）。数据未核实，不承诺流量或收益。">
+<style>
+  :root{
+    --bg:#faf8f3;
+    --card:#ffffff;
+    --ink:#1f2328;
+    --mut:#5c6660;
+    --acc:#2e7d5b;
+    --acc-d:#1e5c41;
+    --soft:#e8f2ec;
+    --soft-2:#f3f8f4;
+    --line:#e6e1d4;
+    --warn-ink:#8a5a1d;
+    --warn-bg:#fdf3e2;
+    --warn-line:#f0ddb8;
+    --code-bg:#f1efe8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+    font-size:17px;
+    line-height:1.75;
+    word-break:break-word;
+    overflow-wrap:anywhere;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:20px 16px 64px}
+  a{color:var(--acc-d);text-decoration:underline;text-underline-offset:3px;word-break:break-all}
+  a:hover{color:var(--acc)}
+  h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em;font-weight:700}
+  h1{font-size:clamp(24px,6.2vw,32px);letter-spacing:.5px}
+  h2{font-size:clamp(20px,5vw,24px)}
+  h3{font-size:19px}
+  h4{font-size:17.5px;color:var(--acc-d)}
+  p{margin:.55em 0}
+  ul,ol{margin:.5em 0 .8em;padding-left:1.5em}
+  li{margin:.35em 0}
+  section{scroll-margin-top:14px}
+  .top-line{height:6px;background:linear-gradient(90deg,var(--acc),#7fb89a);border-radius:6px;margin-bottom:16px}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 18px 16px;
+    margin:14px 0;
+    box-shadow:0 1px 3px rgba(31,35,40,.05);
+  }
+  .masthead{border-top:4px solid var(--acc)}
+  .meta{color:var(--mut);font-size:15px;margin-top:6px}
+  .meta span{display:inline-block;margin-right:14px}
+  .hero{
+    background:linear-gradient(160deg,var(--soft) 0%,#fdfcf8 65%);
+    border:1.5px solid #cfe3d5;
+    border-left:6px solid var(--acc);
+  }
+  .hero .kicker{font-size:14.5px;font-weight:700;color:var(--acc-d);letter-spacing:2px}
+  .hero .big{font-size:clamp(19px,4.6vw,22px);font-weight:700;margin:.35em 0 .4em;color:var(--ink)}
+  .hero .big em{font-style:normal;color:var(--acc-d);border-bottom:3px solid #a8d3ba}
+  .acct-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .chip{background:#fff;border:1px solid #cfe3d5;color:var(--acc-d);border-radius:999px;padding:4px 12px;font-size:14.5px;font-weight:600}
+  nav.toc{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  nav.toc a{
+    flex:0 0 auto;background:#fff;border:1px solid var(--line);color:var(--acc-d);
+    border-radius:999px;padding:5px 13px;font-size:14px;text-decoration:none;white-space:nowrap;font-weight:600;
+  }
+  nav.toc a:hover{background:var(--soft);border-color:#cfe3d5}
+  .note{background:var(--soft-2);border:1px solid #d9e8de;border-left:4px solid var(--acc);border-radius:10px;padding:10px 14px;font-size:16px;margin:10px 0}
+  .warn{background:var(--warn-bg);border:1px solid var(--warn-line);border-left:5px solid #d9a441;border-radius:10px;padding:12px 14px;color:#5d4416;font-size:16px;margin:12px 0}
+  .warn strong{color:var(--warn-ink)}
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 14px;border-radius:10px}
+  table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65;background:#fff}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:var(--soft-2);color:var(--acc-d);font-weight:700;white-space:nowrap}
+  .wide th,.wide td{padding:9px 10px}
+  table.k1{min-width:660px}
+  table.k2{min-width:560px}
+  table.k3{min-width:720px}
+  caption{caption-side:top;text-align:left;font-size:14px;color:var(--mut);padding:0 0 6px}
+  .tg{display:inline-block;font-size:12.5px;font-weight:700;padding:1px 9px;border-radius:999px;line-height:1.6;margin:0 2px;white-space:nowrap;vertical-align:.08em}
+  .t-fact{background:#dcefe3;color:#1e5c41}
+  .t-infer{background:#e6ede9;color:#3d5b4d}
+  .t-test{background:#eef6e9;color:#456328;border:1px solid #cfe3b8}
+  .t-unv{background:#f9e9c8;color:#7a5313}
+  code,.code{background:var(--code-bg);border:1px solid #e4e0d3;border-radius:6px;padding:1px 6px;font-size:14px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .acct{border:1px solid var(--line);border-radius:14px;background:#fff;margin:14px 0;overflow:hidden}
+  .acct-h{display:flex;align-items:center;gap:12px;padding:13px 16px;background:var(--soft);border-bottom:1px solid #d9e8de}
+  .acct-h .abc{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;font-size:19px;display:flex;align-items:center;justify-content:center}
+  .acct-h .nm{font-size:18px;font-weight:800;color:var(--acc-d)}
+  .acct-h .sub{font-size:14px;color:var(--mut)}
+  .acct-b{padding:4px 16px 14px}
+  .kv{font-size:15.5px;color:var(--mut)}
+  .kv b{color:var(--ink)}
+  .sec-head{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--soft);padding-bottom:6px;margin:26px 0 12px}
+  .sec-head .no{color:var(--acc);font-weight:800;font-size:15px;letter-spacing:1px;white-space:nowrap}
+  .backtop{display:inline-block;font-size:13.5px;margin-top:8px;text-decoration:none;color:var(--mut)}
+  .backtop:hover{color:var(--acc-d)}
+  .foot{margin-top:30px;padding-top:14px;border-top:1px dashed var(--line);color:var(--mut);font-size:14.5px}
+  .pool li{margin:.25em 0}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+  .grid2 .card{margin:0}
+  @media (max-width:430px){
+    .wrap{padding:14px 10px 48px}
+    .card{padding:14px 12px 12px;border-radius:12px}
+    .acct-b{padding:2px 12px 12px}
+    th,td{padding:8px 8px}
+  }
+</style>
+</head>
+<body id="top">
+<div class="wrap">
+
+  <div class="top-line"></div>
+
+  <!-- ═══════════ 头部 ═══════════ -->
+  <header class="card masthead">
+    <h1>抖音三账号起号方案 <span style="color:var(--acc)">·</span> 2026-10-17</h1>
+    <div class="meta">
+      <span><b>日期</b>：2026-10-17（Asia/Shanghai）</span>
+      <span><b>平台</b>：抖音（用户已明确；此前测号方案开号平台待定）</span><br>
+      <span><b>角色</b>：内容运营 + 商业分析顾问交付</span>
+      <span><b>情报跟踪</b>：Hermes 负责赛道情报持续跟踪</span>
+      <span><b>对象</b>：阿星 · AI 自媒体副业</span>
+    </div>
+    <div class="warn" role="note">
+      <strong>重要声明：</strong>凡来自情报页转述的抖音涨粉 / 变现数字，一律为 <b>作者自述、未核实</b>；本方案为内容运营与测试设计建议，<b>不承诺任何播放量、涨粉或收入</b>。平台规则（含粉丝门槛、伙伴计划、儿童内容、AI 标识）以抖音创作者中心后台实时展示为准。
+    </div>
+  </header>
+
+  <!-- ═══════════ 顶部推荐结论大卡片 ═══════════ -->
+  <section class="card hero" aria-label="推荐结论">
+    <div class="kicker">推 荐 结 论 · 先看这里</div>
+    <div class="big">开 <em>3 个不同赛道</em> 的抖音号并行测 <em>21 天</em>，而不是同赛道切三个定位。</div>
+    <p style="margin:0"><span class="tg t-test">测试建议</span> 理由：阿星是副业产能有限；不同赛道对应不同受众与变现路径，一次测试能拿到「哪条路值得加码」的决策信息。同赛道三定位会浪费样本、拉长验证周期。</p>
+    <div class="acct-chips">
+      <span class="chip">A · 终端哲思（先发 Day0）</span>
+      <span class="chip">B · 蜡笔哄睡（并行主测）</span>
+      <span class="chip">C · 水墨人文（并行主测 · 首周降风险题材 · 无小忍者）</span>
+    </div>
+  </section>
+
+  <nav class="toc" aria-label="目录">
+    <a href="#s0">〇 阅读说明</a>
+    <a href="#s1">一 推荐结论</a>
+    <a href="#s2">二 赛道比较</a>
+    <a href="#s3">三 起号流程</a>
+    <a href="#s4">四 流量推进</a>
+    <a href="#s5">五 止损标准</a>
+    <a href="#s6">六 变现逻辑</a>
+    <a href="#s7">七 时间计划</a>
+    <a href="#s8">八 拍板事项</a>
+    <a href="#s9">九 来源与免责</a>
+  </nav>
+
+  <!-- ═══════════ 〇 阅读说明 ═══════════ -->
+  <section id="s0">
+    <div class="sec-head"><span class="no">〇</span><h2>阅读说明（先读再执行）</h2></div>
+
+    <div class="card">
+      <div class="tw"><table class="k2">
+        <caption>全文标记含义</caption>
+        <thead><tr><th>标记</th><th>含义</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tg t-fact">数据事实</span></td><td>公开可核验的数字/报道，附来源、时间、口径</td></tr>
+          <tr><td><span class="tg t-infer">分析推断</span></td><td>基于事实与产能约束的判断，非平台标准</td></tr>
+          <tr><td><span class="tg t-test">测试建议</span></td><td>可执行动作；不承诺流量或收益</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>硬约束（已写入方案）</h3>
+      <ul>
+        <li><b>【艺】艺术动画解说</b>：水墨 / 画风速通 / 动态文字 / Kurzgesagt 等；约 60 秒成片 30–60 分钟；样片：火箭拆解、RAG 白板、小忍者艺术史。<b>小忍者造型有侵权风险；聊斋先不用该造型。</b></li>
+        <li><b>【短】短片制作</b>：蜡笔绘本、水墨、皮影、终端 ASCII/CRT、玻璃产品、数据叙事等；约 60–80 秒成片 30–50 分钟；样片：四条蜡笔童话 +《AI 会有意识吗》63 秒。<b>夜景、强光影、角色少效果最好。</b></li>
+        <li>成片<b>不推 GitHub</b>。</li>
+        <li>此前测号方向：终端哲思、聊斋水墨志怪、单食材科普；现平台定为抖音，故对「单食材」做抖音适配替换（见第一章）。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>必读素材实际打开 URL</h3>
+      <div class="tw"><table class="k2">
+        <thead><tr><th>素材</th><th>实际打开 URL</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr><td>赛道情报 10-15</td><td><a href="https://18702524676.github.io/x-hotspots/niche/2026-10-15.html" target="_blank" rel="noopener">18702524676.github.io/x-hotspots/niche/2026-10-15.html</a></td><td>正常</td></tr>
+          <tr><td>赛道情报 10-16</td><td><a href="https://18702524676.github.io/x-hotspots/niche/2026-10-16.html" target="_blank" rel="noopener">18702524676.github.io/x-hotspots/niche/2026-10-16.html</a></td><td>正常</td></tr>
+          <tr><td>赛道×风格 10-15</td><td><a href="https://18702524676.github.io/track-style-analysis/2026-10-15.html" target="_blank" rel="noopener">18702524676.github.io/track-style-analysis/2026-10-15.html</a></td><td>正常</td></tr>
+          <tr><td>赛道×风格 10-16</td><td><a href="https://18702524676.github.io/track-style-analysis/2026-10-16.html" target="_blank" rel="noopener">18702524676.github.io/track-style-analysis/2026-10-16.html</a></td><td>正常</td></tr>
+          <tr><td>本地 10-15</td><td><code>/workspace/赛道风格分析_2026-10-15.md</code></td><td>存在</td></tr>
+          <tr><td>本地 10-16</td><td><code>/workspace/赛道风格分析_2026-10-16.md</code></td><td>存在</td></tr>
+        </tbody>
+      </table></div>
+      <p>未出现 404，无需启用 <code>.../x-hotspots/analysis/2026-10-1x.html</code> 备用路径。</p>
+      <div class="warn"><strong>X 帖粉丝数字口径：</strong>凡来自情报页转述的抖音涨粉/变现数字，一律标为 <b>「作者自述，未核实」</b>。</div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 一 推荐结论 ═══════════ -->
+  <section id="s1">
+    <div class="sec-head"><span class="no">一</span><h2>推荐结论</h2></div>
+
+    <div class="card">
+      <h3>1.1 一句话结论</h3>
+      <p><span class="tg t-test">测试建议</span> 开 <b>3 个不同赛道</b>的抖音号并行测 21 天，而不是同赛道切三个定位。</p>
+      <p>理由：阿星是副业产能有限；不同赛道对应不同受众与变现路径，一次测试能拿到「哪条路值得加码」的决策信息。同赛道三定位会浪费样本、拉长验证周期。</p>
+    </div>
+
+    <h3 style="margin-top:18px">1.2 三账号分工表（最终推荐的 3 个账号）</h3>
+    <div class="tw"><table class="k3 wide">
+      <thead><tr><th>账号</th><th>赛道定位</th><th>负责管线</th><th>目标人群</th><th>内容方向</th><th>首批能否用现成样片</th><th>主变现假设</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>A · 终端哲思</b></td>
+          <td>ASCII/CRT 终端风 AI 哲思短片</td>
+          <td>【短】</td>
+          <td>18–35 科技好奇 / AI 从业与学生</td>
+          <td>60 秒终端日志式自问自答：意识、记忆、死亡、模拟宇宙</td>
+          <td>能：《AI 会有意识吗》63 秒</td>
+          <td>科技类星图 / 知识付费导流 / 平台任务练手</td>
+        </tr>
+        <tr>
+          <td><b>B · 蜡笔哄睡</b></td>
+          <td>中英双语蜡笔睡前故事</td>
+          <td>【短】</td>
+          <td>25–40 宝妈宝爸，孩子约 3–8 岁</td>
+          <td>夜景少角色蜡笔童话；中文叙事 + 关键词英文字幕/跟读</td>
+          <td>能：四条蜡笔童话改编双语版</td>
+          <td>小店数字绘本/有声包 → 早教周边橱窗</td>
+        </tr>
+        <tr>
+          <td><b>C · 水墨人文</b></td>
+          <td>国风水墨人文动画（古诗/志怪短篇，<b>无小忍者造型</b>）</td>
+          <td>【艺】为主，【短】备选水墨</td>
+          <td>18–40 国风爱好者、语文家长、文旅兴趣</td>
+          <td>60 秒水墨长卷/夜景灯影讲一首诗或一篇短志怪；角色用原创剪影或书生/旅人，不用小忍者</td>
+          <td>部分：火箭/RAG/小忍者样片<b>不直接发聊斋</b>；首批新做 2–3 条无侵权造型水墨片</td>
+          <td>品牌/文旅星图 → 中长视频伙伴类收益（以后台为准）→ 文创</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="card">
+      <h3>1.3 为何不是「此前三条原样」上抖音</h3>
+      <div class="tw"><table class="k1">
+        <thead><tr><th>原测号方向</th><th>抖音适配结论</th></tr></thead>
+        <tbody>
+          <tr><td>终端哲思</td><td><b>保留为 A</b>。现成样片、画风稀缺、与【短】强匹配。</td></tr>
+          <tr><td>聊斋水墨志怪</td><td><b>并入 C，但降风险执行</b>：证据强，但小忍者禁用；首 7 天用「古诗词水墨 / 无固定侵权 IP 的短志怪」起量，确认画风与完播后再上聊斋篇目。</td></tr>
+          <tr><td>单食材科普</td><td><b>暂不作为独立抖音主号</b>。证据偏 YouTube 搜索长尾（原帖作者自述 38 条→4.72 万订阅，未核实频道名）；抖音上健康宣称审核严，且与「抗炎减脂带货」易绑死合规风险。产能让给 B（亲子数字产品路径更清晰）。单食材可作 B/C 稳定后的实验切片，不占首轮三号坑位。</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>1.4 与 10-15 / 10-16 优先级的对齐说明</h3>
+      <ul>
+        <li>10-16 测号方案原建议：终端 / 聊斋 / 单食材；开号平台待定。</li>
+        <li>10-15 蓝海优先：蜡笔双语睡前 / 皮影热门 IP / 36 画风速通。</li>
+        <li><span class="tg t-infer">分析推断</span> 平台锁定抖音后：保留「终端」；用「蜡笔哄睡」替换「单食材」以吃亲子变现；用「水墨人文（含聊斋二期）」承接 10-16 聊斋证据 + 10-15 人文热度，并规避小忍者侵权。皮影与 36 画风列为<b>候补赛道</b>（见第五章止损章）。</li>
+      </ul>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 二 赛道比较 ═══════════ -->
+  <section id="s2">
+    <div class="sec-head"><span class="no">二</span><h2>赛道比较（五维）</h2></div>
+
+    <p class="note">评分仅为相对排序（1–5，5 更优），<b>不是平台统一标准</b>。<span class="tg t-infer">分析推断</span></p>
+
+    <div class="tw"><table class="k1 wide">
+      <thead><tr><th>维度</th><th>A 终端哲思</th><th>B 蜡笔哄睡</th><th>C 水墨人文</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>需求热度</td><td>4</td><td>5</td><td>5</td><td>A：X 近 7 天 AI consciousness 相关帖约 1093（情报页 X 接口，话题热≠播放）；B：儿童故事 YouTube 头部订阅高；C：新榜报道人文 AI 话题量级大</td></tr>
+        <tr><td>竞争强度（低=好）</td><td>5（终端风同类账号：未查到）</td><td>3（亲子绘本已有头部，需画风差异）</td><td>3（国风 AI 人文热，水墨代码风仍可切）</td><td>竞争账号精确数量多数「未查到」</td></tr>
+        <tr><td>制作成本（低=好）</td><td>5（现成样片）</td><td>4（有 4 部蜡笔经验）</td><td>3（需新做无侵权造型样片）</td><td>按团队单条约 30–60 分钟计</td></tr>
+        <tr><td>持续产出难度（低=好）</td><td>4（选题库：哲学问题可模板化）</td><td>3（故事原创/改编；版权需注意）</td><td>3（诗库/聊斋篇目多，但质检更重）</td><td></td></tr>
+        <tr><td>变现潜力（抖音）</td><td>3（偏认知粉，带货弱，商单/课强）</td><td>5（精准宝妈 + 虚拟品）</td><td>4（商单/文旅/伙伴计划）</td><td>见第六章</td></tr>
+        <tr><td><b>综合测号优先</b></td><td><b>先发（Day0）</b></td><td><b>并行主测</b></td><td><b>并行主测（首周降风险题材）</b></td><td></td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="card">
+      <h3>2.1 关键公开证据摘要（带口径）</h3>
+      <p><span class="tg t-fact">数据事实</span></p>
+      <ol>
+        <li><b>人文 AI 话题（新榜）</b>：话题 <code>#用AI打开人文新视界</code> 相关视频获得超 10 亿次围观；<code>#琵琶行</code> 近 2 个月新增播放量超 25 亿（报道口径为话题播放估算）。来源：<a href="https://www.newrank.cn/article/detail/34643" target="_blank" rel="noopener">新榜文章</a>（检索于 2026-10-17）。</li>
+        <li><b>志怪 AI 短剧《非妖哉》</b>：多家媒体报道两集获赞超百万级、账号粉丝从千级涨至约 50 万量级；后续报道有三集播放破亿、粉丝进一步上升等口径差异。来源示例：<a href="https://www.bjnews.com.cn/detail/1788235554169732.html" target="_blank" rel="noopener">新京报 2026-09-01</a>、<a href="https://m.dutenews.com/n/article/60074206" target="_blank" rel="noopener">读特</a>。<b>注意</b>：该案例单集成本约万元级、制作周期约 10 天，与阿星「30–60 分钟一条」产能完全不同，只能证明「志怪/聊斋壳 + 强叙事」有需求，<b>不能照搬其成本与节奏</b>。</li>
+        <li><b>儿童童话 YouTube</b>：Fairy Tales and Stories for Kids（@fairytales.english）约 <b>317 万订阅</b>、累计约 <b>14.6 亿播放</b>、约 1090 条视频（Social Blade，约 2026-10-12 口径）。来源：<a href="https://socialblade.com/youtube/handle/fairytales.english" target="_blank" rel="noopener">Social Blade</a>。</li>
+        <li><b>Bedtime Stories 频道引用勘误</b>：10-15 分析引用的 @bedtimestorieschannel（约 109 万订阅 / 259 视频）经 Social Blade / 频道简介核验，实为<b>成人恐怖/怪谈向「Bedtime Stories」</b>，<b>不宜作为儿童睡前故事需求证据</b>。儿童向另见 @story（BedtimeStory.TV）约 22.4 万订阅 / 58 视频（Social Blade，约 2026-10-12）。<span class="tg t-fact">数据事实</span> + <b>对旧分析的修正</b></li>
+        <li><b>抖音变现路径（行业文，非官方门槛承诺）</b>：带货橱窗需实名、作品数、粉丝达后台当时门槛（数字会调）；星图看垂直度；平台任务可低粉练手；原「中视频伙伴计划」已升级为「创作者伙伴计划」相关口径（2024-09 起中视频分成不再单独发放的行业转述）。来源：<a href="https://www.hailuoshe.com/blog/douyin-monetization-ordinary-people" target="_blank" rel="noopener">海螺社 2026-07</a>。<b>具体粉丝门槛以创作者中心后台为准，本报告不写死数字。</b></li>
+      </ol>
+
+      <p style="margin-top:14px"><span class="tg t-unv">作者自述 · 未核实</span>（情报页转述，仅作方向参考）</p>
+      <ul>
+        <li>「古卷残灯」13 条 → 59.4 万粉；单条《祸女》破百万（X 帖转述）。</li>
+        <li>AI 科普作者自称 14 天涨粉 16.3 万。</li>
+        <li>AI 脱口秀 29 条 → 19.1 万粉。</li>
+        <li>少儿英语绘本「陪娃学英语」等 186.7 万粉 / 小店半年 4600 单等。</li>
+        <li>新号 39 条英语绘本 → 6.4 万粉。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>2.2 缺会显著影响决策的信息（优先标出）</h3>
+      <ol>
+        <li>抖音端「终端风 / 蜡笔双语睡前 / 水墨短志怪」<b>精确竞品数量与中位播放</b>：未查到可批量抓取口径 → 必须用自己的 21 天样本补。</li>
+        <li>阿星抖音是否已有实名、创作者权限、小店/橱窗状态：<b>未知</b> → 假设「可新开号 + 可申请基础权限」，若缺则 Day0–1 优先补资质。</li>
+        <li>每周可投入的绝对小时数：<b>未知</b> → 本方案按「两管线并行、合计约每日 1.5–3 小时成片」假设；若更少，则缩为「两号主测 + 一号缓开」。</li>
+        <li>数字产品（绘本 PDF/有声）是否已有可售物料：<b>未知</b> → B 号变现验证可能延后到粉精准后再上架。</li>
+      </ol>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 三 起号流程 ═══════════ -->
+  <section id="s3">
+    <div class="sec-head"><span class="no">三</span><h2>三账号起号流程（定位 → 主页 → 选题 → 制作 → 发布 → 复盘）</h2></div>
+
+    <div class="card">
+      <h3>3.0 总原则（三号共用）</h3>
+      <p><span class="tg t-test">测试建议</span></p>
+      <ul>
+        <li><b>测试周期</b>：21 天（3 周）为第一决策窗口；第 14 天做中期体检，第 21 天做去留。</li>
+        <li><b>更新频率</b>：起号期每号<b>每 2 天 1 条</b>（约每周 3–4 条/号），三号合计约每周 9–12 条；若产能不够，优先保证<b>每号每周 ≥2 条</b>且不断更。</li>
+        <li><b>发布建议时段（经验参考，非平台标准）</b>：A 21:00–23:00；B 19:30–21:00（哄睡前）；C 12:00–13:00 或 21:00–22:00。以自己后台「观众活跃」为准迭代。</li>
+        <li><b>关键指标（看结构，不看单条玄学）</b>
+          <ul>
+            <li>48h：播放、完播率、5s 完播、点赞率、评论率、关注转化（新增关注/播放）</li>
+            <li>7 日：粉丝净增、作品中位数播放、是否出现「非粉丝播放占比」升高（若后台有）</li>
+            <li><b>禁止</b>：只因 1–2 条播放高低就定生死。</li>
+          </ul>
+        </li>
+        <li><b>资源</b>：【短】扛 A+B；【艺】扛 C；Hermes 每周输出竞品与话题简报；成片<b>不出现 GitHub</b>。</li>
+        <li><b>合规</b>：A 不承诺 AI 具有意识；B 设面向儿童相关选项按平台要求；C 志怪控制尺度、不宣扬封建迷信疗效；全员按平台要求做 AI 生成内容标识（以后台规则为准）。</li>
+      </ul>
+    </div>
+
+    <!-- 账号 A -->
+    <div class="acct">
+      <div class="acct-h">
+        <div class="abc">A</div>
+        <div><div class="nm">终端哲思</div><div class="sub">ASCII/CRT 终端风 AI 哲思短片 · 管线【短】 · 先发 Day0</div></div>
+      </div>
+      <div class="acct-b">
+        <p><b>定位一句话</b>：用 CRT/ASCII 终端界面，让「AI」以日志口吻追问意识与存在；视觉极简、观点密集、60 秒内给一个刺点。</p>
+        <h4>主页设置（Day0）</h4>
+        <ul>
+          <li>昵称示例：<code>终端里的追问</code> / <code>&gt;_ ask_ai</code>（最终以未占用为准）</li>
+          <li>头像：黑底绿字终端光标或静态 CRT 帧</li>
+          <li>简介：<code>60 秒终端日志 · 问 AI 会不会怕 / 记不记得 / 算不算活着</code> + 固定系列名</li>
+          <li>背景：一张终端截图；作品集建「哲思日志」合集</li>
+          <li>不做外链导流到 GitHub；若需私域，等第二阶段再用合规方式</li>
+        </ul>
+        <h4>选题公式</h4>
+        <p><code>一个可争论的问题 + 一个反转句 + 结尾开放问题（引导评论）</code>　首批 6 条池：</p>
+        <ol class="pool">
+          <li>《AI 会有意识吗》（现成）</li>
+          <li>《如果 AI 没有记忆，它会怕死吗》</li>
+          <li>《我们是不是活在模拟里》</li>
+          <li>《25 个 AI 组成一个社会会怎样》</li>
+          <li>《宇宙会不会终结》</li>
+          <li>《删除一个模型算不算死亡》</li>
+        </ol>
+        <h4>制作</h4>
+        <ul>
+          <li>管线【短】ASCII/CRT；夜景感/扫描线；少角色（几乎无角色）</li>
+          <li>时长 55–70 秒；字幕大、对比强；BGM 低音量电子/环境音</li>
+          <li>单条约 30–50 分钟</li>
+        </ul>
+        <h4>发布</h4>
+        <ul>
+          <li>标签示例：<code>#AI哲思 #人工智能 #终端风 #深度思考</code>（测 2 套标签组合）</li>
+          <li>文案：问题前置 +「你觉得算吗？打在评论区」</li>
+          <li>发布后 1 小时内回复前 10–20 条评论（起号互动）</li>
+        </ul>
+        <h4>复盘（每条 +48h，每周汇总）</h4>
+        <ul>
+          <li>记录表字段：标题 / 发布时刻 / 播放 / 完播 / 赞评藏关 / 评论里重复出现的词</li>
+          <li>若完播低、互动高 → 钩子弱、观点强 → 改前 3 秒</li>
+          <li>若完播高、关注低 → 系列感不足 → 强化固定片头「LOG #00x」</li>
+        </ul>
+        <h4>首两周具体日程（A）</h4>
+        <div class="tw"><table class="k2">
+          <thead><tr><th>天</th><th>动作</th></tr></thead>
+          <tbody>
+            <tr><td>D0</td><td>注册/装修主页；导出《AI 会有意识吗》；设 AI 标识与合集</td></tr>
+            <tr><td>D1</td><td>发布 #1；开评论置顶引导</td></tr>
+            <tr><td>D2</td><td>制作 #2</td></tr>
+            <tr><td>D3</td><td>发布 #2；复盘 #1 的 48h</td></tr>
+            <tr><td>D4</td><td>制作 #3</td></tr>
+            <tr><td>D5</td><td>发布 #3</td></tr>
+            <tr><td>D6</td><td>周复盘：中位播放、完播、关注转化；决定 #4 选题是否跟随评论热词</td></tr>
+            <tr><td>D7–D14</td><td>维持每 2 天 1 条；第 14 天对照第四章门槛</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- 账号 B -->
+    <div class="acct">
+      <div class="acct-h">
+        <div class="abc">B</div>
+        <div><div class="nm">蜡笔哄睡</div><div class="sub">中英双语蜡笔睡前故事 · 管线【短】 · 并行主测</div></div>
+      </div>
+      <div class="acct-b">
+        <p><b>定位一句话</b>：每晚一个温柔夜景蜡笔童话；中文听故事，屏幕上浮现关键词英文，给 3–8 岁哄睡与轻度启蒙。</p>
+        <h4>主页设置（Day0）</h4>
+        <ul>
+          <li>昵称示例：<code>小蜡笔哄睡馆</code> / <code>月亮点读灯</code></li>
+          <li>头像：蜡笔月亮或小熊剪影（原创，避免迪士尼等商标形象）</li>
+          <li>简介：<code>3–8 岁 · 夜景童话 · 中英关键词</code> +「适合睡前安静看」</li>
+          <li>按平台要求处理<b>面向未成年人/儿童内容</b>相关设置（以后台选项为准）</li>
+          <li>合集：<code>哄睡童话</code> / <code>英文词卡片</code></li>
+        </ul>
+        <h4>选题公式</h4>
+        <p><code>一个柔软冲突（想家/怕黑/分享）+ 夜景少角色 + 结尾一句安抚 + 2–5 个英文关键词标注</code>　首批：</p>
+        <ol class="pool">
+          <li>《月亮忘了回家》</li>
+          <li>《小熊的星星灯》</li>
+          <li>《不想睡觉的小狐狸》</li>
+          <li>《会发光的雨靴》（新）</li>
+          <li>《云朵借了一颗星星》（新）</li>
+          <li>《蜗牛的慢火车》（新）</li>
+        </ol>
+        <p class="kv">（前三条可改自现有四条蜡笔样片）</p>
+        <h4>制作</h4>
+        <ul>
+          <li>管线【短】蜡笔；<b>夜景 + 少角色</b>；60–80 秒</li>
+          <li>音频：温柔中文旁白；英文词用字幕弹出，不强制整段英文旁白（降低制作与口音风险）</li>
+          <li>版权：优先原创故事或公版童话改编；不搬热门绘本原文</li>
+        </ul>
+        <h4>发布</h4>
+        <ul>
+          <li>时段偏晚；文案强调「睡前安静模式」</li>
+          <li>评论引导宝妈：孩子几岁、今晚听懂了哪个词</li>
+        </ul>
+        <h4>复盘</h4>
+        <ul>
+          <li>除通用指标外，额外看：<b>完播是否在后 15 秒骤降</b>（故事结尾是否拖）、收藏率（家长是否想复看）</li>
+          <li>关注转化低但收藏高 → 内容对、人设弱 → 固定「月亮姐姐」旁白人设（声音一致即可）</li>
+        </ul>
+        <h4>首两周具体日程（B）</h4>
+        <div class="tw"><table class="k2">
+          <thead><tr><th>天</th><th>动作</th></tr></thead>
+          <tbody>
+            <tr><td>D0</td><td>装修；选定 3 条可改样片；确认儿童向设置</td></tr>
+            <tr><td>D1</td><td>改完并发布 #1</td></tr>
+            <tr><td>D2</td><td>改 #2</td></tr>
+            <tr><td>D3</td><td>发布 #2；复盘 #1</td></tr>
+            <tr><td>D4–D5</td><td>新故事脚本 + 制作 #3</td></tr>
+            <tr><td>D6</td><td>发布 #3；确认数字产品最小可行包（1 本 PDF 提纲）是否启动（见拍板项）</td></tr>
+            <tr><td>D7–D14</td><td>每 2 天 1 条；同步收集评论里的年龄段，反推下一周选题</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- 账号 C -->
+    <div class="acct">
+      <div class="acct-h">
+        <div class="abc">C</div>
+        <div><div class="nm">水墨人文（无小忍者）</div><div class="sub">国风水墨人文动画 · 管线【艺】为主 · 并行主测 · 首周降风险题材</div></div>
+      </div>
+      <div class="acct-b">
+        <p><b>定位一句话</b>：用统一水墨/灯影视觉，60 秒讲透一首古诗意境或一篇短志怪的「人情核」；先立画风，再上聊斋篇目。</p>
+        <h4>主页设置（Day0）</h4>
+        <ul>
+          <li>昵称示例：<code>墨边一夜</code> / <code>灯下人文笺</code></li>
+          <li>头像：墨点灯笼或空白卷轴（原创）</li>
+          <li>简介：<code>水墨 60 秒 · 诗与志怪里的人心</code> +「AI 辅助创作，内容已标识」</li>
+          <li><b>明确不使用小忍者造型</b>；系列角色若需要，用原创旅人剪影</li>
+        </ul>
+        <h4>选题分两期</h4>
+        <ul>
+          <li><b>一期（D1–D10，降风险）</b>：古诗词意境 / 人文短解说（对齐新榜人文热度）。例：《琵琶行·江头一夜》《床前是什么光》《春江花月夜·一寸月光》</li>
+          <li><b>二期（通过一期门槛后）</b>：聊斋短篇人情核（画皮、聂小倩、崂山道士等），<b>仍不用小忍者</b>；控制恐怖尺度，偏「人情/选择」而非惊吓</li>
+        </ul>
+        <h4>制作</h4>
+        <ul>
+          <li>管线【艺】中国水墨 + 长卷/灯影；夜景烛火优先</li>
+          <li>单条 30–60 分钟；角色少</li>
+          <li>小忍者艺术史样片：<b>不直接发到本号</b>；若要做艺术史，另开候补或换原创角色重渲</li>
+        </ul>
+        <h4>发布与复盘</h4>
+        <ul>
+          <li>文案结构：原文一句 → 白话刺点 → 收在人情</li>
+          <li>复盘重点：国风粉是否在评论用「美/意境」类词；若只有空赞无评论 → 文案缺观点</li>
+        </ul>
+        <h4>首两周具体日程（C）</h4>
+        <div class="tw"><table class="k2">
+          <thead><tr><th>天</th><th>动作</th></tr></thead>
+          <tbody>
+            <tr><td>D0–D1</td><td>定视觉圣经（色、笔触、字幕字体）；出 1 条古诗样片</td></tr>
+            <tr><td>D2</td><td>发布 #1</td></tr>
+            <tr><td>D3–D4</td><td>制作 #2</td></tr>
+            <tr><td>D5</td><td>发布 #2；48h 复盘 #1</td></tr>
+            <tr><td>D6–D8</td><td>制作并发布 #3；评估是否达到「二期聊斋」门槛（见第四章）</td></tr>
+            <tr><td>D9–D14</td><td>若一期达标：开聊斋 #1（无小忍者）；若不达标：继续古诗/换候补画风测一条皮影实验片（不新开号）</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+    <a class="backtop" href="#top">↑ 返回顶部</a>
+  </section>
+
+  <!-- ═══════════ 四 流量推进 ═══════════ -->
+  <section id="s4">
+    <div class="sec-head"><span class="no">四</span><h2>有流量之后怎么推进</h2></div>
+
+    <div class="card">
+      <h3>4.1 如何判断流量「可持续」（不是偶然爆）</h3>
+      <p><span class="tg t-test">测试建议</span> 同时满足以下再称「方向初步成立」（经验阈值，非平台标准）：</p>
+      <ol>
+        <li><b>样本</b>：单号有效样本 ≥ <b>6 条</b>（建议满 8 条更稳），且发布跨度 ≥ 14 天。</li>
+        <li><b>中位播放</b> 连续 3 条 ≥ 该号前 6 条中位数的 <b>1.5 倍</b>，或中位播放稳定在你可接受的「能涨粉」区间（自己定底线，例如中位 ≥ 某阈值）。</li>
+        <li><b>完播结构</b>：至少半数作品完播率不低于该号历史中位；且非粉丝播放可观（若后台有此字段）。</li>
+        <li><b>关注转化</b>：近 7 日「新增关注 / 播放」不明显下滑；评论出现重复人群或「等下一集」。</li>
+        <li><b>可解释性</b>：能说清爆/稳的原因是「选题 / 钩子 / 画风」之一，而不是纯运气。</li>
+      </ol>
+      <div class="note">任一爆款但其余条全面溃败 → <b>不可持续</b>，先复制该条的结构变量，再谈加码。</div>
+    </div>
+
+    <div class="card">
+      <h3>4.2 验证选题 → 做系列 → 提升关注与黏性</h3>
+      <div class="tw"><table class="k1">
+        <thead><tr><th>步骤</th><th>做法</th></tr></thead>
+        <tbody>
+          <tr><td>验证选题</td><td>把评论热词做成下一周选题池；A 跟「意识/模拟」，B 跟「怕黑/分享」，C 跟「哪首诗要做成」</td></tr>
+          <tr><td>系列化</td><td>固定片头 1.5 秒 + 合集 + 标题编号；每周至少 1 条「系列回访」</td></tr>
+          <tr><td>关注转化</td><td>片尾 3 秒只做一个动作：「关注看下一问/下一夜/下一卷」；主页置顶代表作</td></tr>
+          <tr><td>黏性</td><td>每周 1 次评论区小互动（投票下一题）；B 可做「单词复习」图文补充（非必须）</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>4.3 何时扩大投入、何时测变现</h3>
+      <div class="tw"><table class="k1">
+        <thead><tr><th>阶段门槛</th><th>动作</th></tr></thead>
+        <tbody>
+          <tr><td><b>S1 方向成立</b>（§4.1）</td><td>该号周更从 3 提到 5；另外两号维持或减产支援</td></tr>
+          <tr><td><b>S2 粉精准</b>（评论画像稳定 + 收藏/分享比改善）</td><td>开变现小实验：B 上架 1 个数字绘本测试价；A 挂 1 个低价知识资料包或书单橱窗；C 申请星图/任务（以后台资格为准）</td></tr>
+          <tr><td><b>S3 变现有一单闭环</b></td><td>才谈加工具预算、外包配音、或把候补赛道升为主号</td></tr>
+        </tbody>
+      </table></div>
+      <h4>进入下一阶段的硬门槛（建议写进周会）</h4>
+      <ul>
+        <li>进 S1：样本与中位播放条件满足，且团队仍愿意下周投入同等时间。</li>
+        <li>进 S2：S1 成立后额外再稳更 7 天，不掉频。</li>
+        <li>进 S3：至少完成 <b>1 次真实付费或 1 次商单意向书面确认</b>（不要把「有人问价格」当成成交）。</li>
+      </ul>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 五 止损标准 ═══════════ -->
+  <section id="s5">
+    <div class="sec-head"><span class="no">五</span><h2>未成功时的调整与止损</h2></div>
+
+    <div class="card">
+      <h3>5.1 三态决策：继续测 / 调整 / 停止</h3>
+      <div class="tw"><table class="k1 wide">
+        <thead><tr><th>状态</th><th>判断标准（经验阈值）</th><th>动作</th></tr></thead>
+        <tbody>
+          <tr><td><b>继续测</b></td><td>样本 &lt; 6，或中位波动大但完播/互动结构在变好</td><td>不改赛道；只改钩子与发布时间</td></tr>
+          <tr><td><b>调整</b></td><td>样本 ≥ 6，中位播放与关注转化双低，但<b>某一变量</b>（如夜景蜡笔、终端钩子）明显好于其他</td><td>同号内改表达或细分定位；可引入候补题材 1–2 条</td></tr>
+          <tr><td><b>停止该号</b></td><td>样本 ≥ 8 且跨度 ≥ 18 天；中位播放、完播、关注转化相对本号自身与另两号均显著更差；连续两周无改善</td><td>停更或改为搬运测试素材号；产能并入胜出号</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>5.2 区分问题类型</h3>
+      <div class="tw"><table class="k1">
+        <thead><tr><th>问题类型</th><th>典型信号</th><th>处理</th></tr></thead>
+        <tbody>
+          <tr><td><b>选题问题</b></td><td>完播尚可，但赞评极低、评论无共鸣</td><td>换问题/故事核；保留画风</td></tr>
+          <tr><td><b>表达问题</b></td><td>3 秒跳出高、完播差，评论说「看不懂/太抖」</td><td>改前 3 秒、字幕、节奏；选题可留</td></tr>
+          <tr><td><b>定位问题</b></td><td>什么内容都一般，观众画像散，主页进访低</td><td>重写简介与系列名；或判定赛道不匹配</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>5.3 样本不足 vs 方向无效</h3>
+      <ul>
+        <li><b>样本不足</b>：总条数少、发布时间挤在同一天、或算法还在打标签 → 继续按频率发，避免大改。</li>
+        <li><b>方向无效</b>：足够样本下，结构指标全面差，且改钩子两轮无效 → 停。</li>
+      </ul>
+      <div class="note"><span class="tg t-test">测试建议</span> 决策时至少看：<b>中位播放、完播分布、关注转化、评论语义</b> 四件套；「有一条十万播放」单独不足以救命，也不足以判死刑。</div>
+    </div>
+
+    <div class="card">
+      <h3>5.4 候补赛道（替换用，不新开第四主号除非产能允许）</h3>
+      <ol>
+        <li><b>皮影 × 名场面</b>（【短】光影强、角色少）：有黑神话皮影上亿级传播的公开解读，但 AI 皮影专门账号数量未查到。</li>
+        <li><b>36 画风艺术史速通</b>（【艺】）：需去掉小忍者，换猫/碗面等原创主体。</li>
+        <li><b>单食材玻璃质感</b>（【短】）：作带货实验切片，严格规避疗效承诺。</li>
+      </ol>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 六 变现逻辑 ═══════════ -->
+  <section id="s6">
+    <div class="sec-head"><span class="no">六</span><h2>各赛道变现逻辑（谁付费、为何付、卖什么）</h2></div>
+
+    <div class="card">
+      <h3>6.1 账号 A · 终端哲思</h3>
+      <div class="tw"><table class="k1">
+        <thead><tr><th>项</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>谁付费</td><td>科技品牌 / 知识产品用户 / 平台（任务补贴）</td></tr>
+          <tr><td>为何付费</td><td>买触达「爱想问题的年轻认知人群」；或买「把问题想清楚」的课程/社群</td></tr>
+          <tr><td>产品</td><td>星图植入；AI 认知课/书单；后期可做付费问答社群</td></tr>
+          <tr><td>模式比较</td><td>商单单价潜力中高，但起量慢；带货弱；平台任务可早期练手</td></tr>
+          <tr><td>启动条件</td><td>垂直内容满 8–12 条 + 粉丝与活跃达星图/橱窗后台门槛</td></tr>
+          <tr><td>成本结构</td><td>几乎纯时间成本；无库存</td></tr>
+          <tr><td>验证周期</td><td>方向 21 天；变现实验建议 S2 后再开 14 天</td></tr>
+          <tr><td>限制</td><td>粉是「看客型」时带货差；哲思易同质化后审美疲劳</td></tr>
+          <tr><td>获客→成交</td><td>短视频认同 → 关注合集 → 置顶资料包/星图 → 私域课（合规导流）</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>6.2 账号 B · 蜡笔哄睡</h3>
+      <div class="tw"><table class="k1">
+        <thead><tr><th>项</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>谁付费</td><td>宝妈宝爸；早教/童书品牌</td></tr>
+          <tr><td>为何付费</td><td>省时间哄睡 + 轻度英语曝光；信任「每天都在更」的稳定感</td></tr>
+          <tr><td>产品</td><td>小店虚拟绘本 PDF / 有声包；实体绘本/夜灯等橱窗佣金；品牌商单</td></tr>
+          <tr><td>模式比较</td><td><b>最适合副业先跑通的变现</b>（虚拟品零库存）；商单需粉与垂直</td></tr>
+          <tr><td>启动条件</td><td>画像确认是家长粉；有 1 个可交付的最小数字产品；橱窗/小店权限就绪</td></tr>
+          <tr><td>成本结构</td><td>制作时间 + 可能的配音/字幕成本；虚拟品边际成本低</td></tr>
+          <tr><td>验证周期</td><td>流量 21 天；上架后用 14 天看转化率（不要只看 GMV）</td></tr>
+          <tr><td>限制</td><td>儿童内容广告与推荐政策更严；版权；双语质量被家长审</td></tr>
+          <tr><td>获客→成交</td><td>哄睡视频收藏 → 关注 → 小店「今晚同款绘本」→ 复购系列包</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>6.3 账号 C · 水墨人文</h3>
+      <div class="tw"><table class="k1">
+        <thead><tr><th>项</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>谁付费</td><td>文旅/出版/美育品牌；平台创作激励；部分家长（语文兴趣）</td></tr>
+          <tr><td>为何付费</td><td>买国风审美与人文调性的内容关联</td></tr>
+          <tr><td>产品</td><td>星图；文创；语文兴趣资料包；伙伴计划类播放收益（以后台为准）</td></tr>
+          <tr><td>模式比较</td><td>商单与调性绑定强；带货需慎选（茶/文创好过乱挂）；对标《非妖哉》路径不现实（成本与叙事级别不同）</td></tr>
+          <tr><td>启动条件</td><td>统一视觉被识别；8+ 条样本；再谈商单材料包（资料辑 + 报价区间）</td></tr>
+          <tr><td>成本结构</td><td>单条时间成本高于 A；若后期加顶尖模型预算需单独审批</td></tr>
+          <tr><td>验证周期</td><td>画风一期 10–14 天；聊斋二期再 14 天</td></tr>
+          <tr><td>限制</td><td>人文赛道已热（红海里找蓝切口）；志怪尺度与迷信擦边；侵权造型零容忍</td></tr>
+          <tr><td>获客→成交</td><td>意境完播 → 关注「下一卷」→ 品牌线下/星图 → 文创</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>6.4 变现模式总比较（副业视角）</h3>
+      <div class="tw"><table class="k2">
+        <thead><tr><th>模式</th><th>更适合哪号</th><th>启动快慢</th><th>备注</th></tr></thead>
+        <tbody>
+          <tr><td>平台任务/激励</td><td>A/B/C</td><td>快</td><td>当回血与练手，不当主利润</td></tr>
+          <tr><td>虚拟产品小店</td><td><b>B</b></td><td>中</td><td>优先验证</td></tr>
+          <tr><td>橱窗佣金</td><td>B，其次谨慎 C</td><td>中</td><td>门槛以后台为准</td></tr>
+          <tr><td>星图商单</td><td>C/A，B（早教）</td><td>慢</td><td>要垂直与数据截图</td></tr>
+          <tr><td>知识付费/私域</td><td>A</td><td>中慢</td><td>合规导流，别早期甩微</td></tr>
+        </tbody>
+      </table></div>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 七 时间计划 ═══════════ -->
+  <section id="s7">
+    <div class="sec-head"><span class="no">七</span><h2>按时间推进的总测试计划（21 天）</h2></div>
+
+    <div class="card">
+      <h3>7.1 总甘特（三号并行）</h3>
+      <div class="tw"><table class="k1">
+        <thead><tr><th>阶段</th><th>日期（示例从开号日起算）</th><th>焦点</th></tr></thead>
+        <tbody>
+          <tr><td><b>P0 准备</b></td><td>D0</td><td>三号注册装修；权限与 AI 标识；样片导出；建复盘表</td></tr>
+          <tr><td><b>P1 冷启动</b></td><td>D1–D7</td><td>A 发 3–4 条；B 发 3–4 条；C 发 2–3 条（古诗向）；每日只复盘结构指标</td></tr>
+          <tr><td><b>P2 中期体检</b></td><td>D8–D14</td><td>第 14 天三号对比会：谁进 S1、谁调整、谁减产；C 决定是否开聊斋二期</td></tr>
+          <tr><td><b>P3 决策</b></td><td>D15–D21</td><td>胜出号加更；失败号止损；胜出号启动最小变现实验设计（未达标则不进）</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h3>7.2 产能排班建议（尊重两机器人）</h3>
+      <div class="tw"><table class="k2">
+        <thead><tr><th>管线</th><th>建议周产能</th><th>分配</th></tr></thead>
+        <tbody>
+          <tr><td>【短】</td><td>约 6–8 条（按 30–50 分/条）</td><td>A 3–4 + B 3–4</td></tr>
+          <tr><td>【艺】</td><td>约 3–4 条（按 30–60 分/条）</td><td>C 3–4</td></tr>
+          <tr><td>Hermes</td><td>每周 1 次情报简报</td><td>竞品、话题、违规案例</td></tr>
+        </tbody>
+      </table></div>
+      <p>若周可投入时间不足：<span class="tg t-test">测试建议</span> <b>停开 C 的二期</b>，先保 A+B；或三号都降到周更 2。</p>
+    </div>
+
+    <div class="card">
+      <h3>7.3 第 14 / 21 天决策会议题（固定）</h3>
+      <ol>
+        <li>三号四件套指标对比表</li>
+        <li>问题归类：选题 / 表达 / 定位</li>
+        <li>产能是否超载</li>
+        <li>是否触发候补赛道替换</li>
+        <li>是否允许进入变现小实验（最多一个号）</li>
+      </ol>
+      <a class="backtop" href="#top">↑ 返回顶部</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 八 拍板事项 ═══════════ -->
+  <section id="s8">
+    <div class="sec-head"><span class="no">八</span><h2>下一步需要阿星拍板的事项（仅 3 个）</h2></div>
+    <div class="grid2">
+      <div class="card">
+        <h4>1. 三号分工确认</h4>
+        <p>是否确认本方案三号分工：A 终端哲思 + B 蜡笔哄睡 + C 水墨人文（聊斋二期、无小忍者）；以及同意用 B 替换原「单食材」抖音主测坑位。</p>
+      </div>
+      <div class="card">
+        <h4>2. 每周可投入小时数</h4>
+        <p>（建议报一个数字）：若 &lt; 8 小时/周，则执行「只开 A+B，C 缓两周」；若 ≥ 12 小时/周，按本文三号并行。</p>
+      </div>
+      <div class="card">
+        <h4>3. B 号数字产品</h4>
+        <p>是否在首两周内做「最小可售绘本 PDF」（是/否）。若否，B 前 21 天只测流量与家长画像，变现延后。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 九 附录 ═══════════ -->
+  <section id="s9">
+    <div class="sec-head"><span class="no">九</span><h2>附录：来源、局限、免责</h2></div>
+
+    <div class="card">
+      <h3>9.1 主要来源</h3>
+      <ul>
+        <li>赛道情报 HTML：2026-10-15 / 2026-10-16（见〇章 URL：<a href="https://18702524676.github.io/x-hotspots/niche/2026-10-15.html" target="_blank" rel="noopener">10-15</a> · <a href="https://18702524676.github.io/x-hotspots/niche/2026-10-16.html" target="_blank" rel="noopener">10-16</a>）</li>
+        <li>赛道×风格 HTML + 本地 MD：2026-10-15 / 2026-10-16（<a href="https://18702524676.github.io/track-style-analysis/2026-10-15.html" target="_blank" rel="noopener">10-15</a> · <a href="https://18702524676.github.io/track-style-analysis/2026-10-16.html" target="_blank" rel="noopener">10-16</a>；本地 <code>/workspace/赛道风格分析_2026-10-15.md</code>、<code>/workspace/赛道风格分析_2026-10-16.md</code>）</li>
+        <li>新榜人文 AI：<a href="https://www.newrank.cn/article/detail/34643" target="_blank" rel="noopener">newrank.cn/article/detail/34643</a></li>
+        <li>《非妖哉》媒体报道（见 §2.1）：<a href="https://www.bjnews.com.cn/detail/1788235554169732.html" target="_blank" rel="noopener">新京报</a> · <a href="https://m.dutenews.com/n/article/60074206" target="_blank" rel="noopener">读特</a></li>
+        <li>Social Blade：<a href="https://socialblade.com/youtube/handle/fairytales.english" target="_blank" rel="noopener">fairytales.english</a> / bedtimestorieschannel / story</li>
+        <li>变现路径行业文：<a href="https://www.hailuoshe.com/blog/douyin-monetization-ordinary-people" target="_blank" rel="noopener">海螺社 2026-07</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>9.2 局限</h3>
+      <ul>
+        <li>情报页大量涨粉/变现数为 X 作者自述或二手转述，<b>未核实</b>。</li>
+        <li>抖音竞品数量与中位播放无法在本环境稳定抓取。</li>
+        <li>不承诺任何播放量、涨粉或收入。</li>
+        <li>旧分析中 Bedtime Stories 儿童向引用已勘误。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>9.3 免责</h3>
+      <p>本方案为内容运营与测试设计建议，不构成投资或收益承诺。平台规则以抖音创作者中心实时展示为准。</p>
+      <div class="warn"><strong>再次提示：</strong>本页面所有涨粉/变现类数据均为<b>作者自述、未核实</b>；阈值与门槛均为经验值而非平台标准；执行结果<b>不承诺任何流量或收益</b>。</div>
+    </div>
+
+    <footer class="foot">
+      <p>本页内容全部来自 <code>/home/box/.hermes/site/douyin-plan/src-2026-10-17.md</code>（抖音三账号起号方案 · 阿星 · AI 自媒体副业），未添加文件之外的数据或结论。单文件自包含 HTML，无外部脚本与样式。</p>
+      <a href="#top" style="font-size:14px">↑ 回到页面顶部</a>
+    </footer>
+  </section>
+
+</div>
+</body>
+</html>
